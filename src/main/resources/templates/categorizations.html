@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head th:insert="~{fragments/general :: head}"></head>
+<body class="">
+<header th:insert="~{fragments/general :: header}"></header>
+
+<div class="container border-5 text-center">
+    <h2>Categorizations (<span th:text="${categorizationsTotal}"></span>)</h2>
+    <div>
+        <canvas id="categorizations-chart"></canvas>
+    </div>
+    <table class="table table-striped table-success">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Input</th>
+            <th scope="col">Category</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="row: ${categorizations}">
+            <th scope="row" th:text="${rowStat.count}"></th>
+            <td th:text="${row.inputText}"></td>
+            <td th:text="${row.transactionCategory}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    const categoriesCount = /*[[${categoriesCount}]]*/ {};
+    const categoriesLabels = Object.keys(categoriesCount).sort();
+    const categoriesData = categoriesLabels.map(category => categoriesCount[category]);
+
+    const categoriesCtx = document.getElementById('categorizations-chart');
+
+    new Chart(categoriesCtx, {
+        type: 'bar',
+        data: {
+            labels: categoriesLabels,
+            datasets: [{
+                label: 'Count per category',
+                data: categoriesData,
+                backgroundColor: [
+                    '#D1E7DD'
+                ],
+                borderColor: [
+                    '#729d8d'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    /*]]>*/
+</script>
+
+<footer th:insert="~{fragments/general :: footer}"></footer>
+</body>
+</html>

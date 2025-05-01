@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<body>
+<table>
+    <thead th:fragment="fields">
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Sequence</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Date</th>
+        <th scope="col">Category</th>
+    </tr>
+    </thead>
+    <tbody th:fragment="tableBody(tableData)">
+    <tr th:each="row: ${tableData}">
+        <th scope="row" th:text="${rowStat.count}"></th>
+        <td th:text="${row.sequenceNumber}">0</td>
+        <td th:text="${row.amount}"></td>
+        <td th:text="${#temporals.format(row.date, 'dd-MM-yyyy')}"></td>
+        <td th:text="${row.transactionCategory}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
