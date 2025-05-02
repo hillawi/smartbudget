@@ -32,7 +32,7 @@ public class TransactionRepositoryAdapter {
   }
 
   public List<Transaction> search(TransactionSearchCriteria transactionSearchCriteria) {
-    var spec = TransactionSpecifications.getTransactionsByCriteria(transactionSearchCriteria);
+    var spec = TransactionSpecifications.transactionsByCriteria(transactionSearchCriteria);
     return transactionJpaMapper.toDomains(
         transactionRepository.findAll(spec, Sort.by(Sort.Order.desc("date"))));
   }

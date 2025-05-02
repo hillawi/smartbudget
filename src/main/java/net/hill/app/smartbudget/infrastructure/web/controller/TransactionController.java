@@ -48,13 +48,9 @@ public class TransactionController {
       addIncomesAttributes(model, transactions);
       addExpensesAttributes(model, transactions);
       addFormAttributes(model, transactionSearchForm);
-    } else {
-      var transactions = transactionRepositoryAdapter.findOrdered();
-      addIncomesAttributes(model, transactions);
-      addExpensesAttributes(model, transactions);
-      addFormAttributes(model, new TransactionSearchForm());
+      return "index";
     }
-    return "index";
+    return transactions(model);
   }
 
   private static void addIncomesAttributes(Model model, List<Transaction> transactions) {

@@ -8,7 +8,7 @@ import net.hill.app.smartbudget.infrastructure.web.dto.TransactionSearchCriteria
 import org.springframework.data.jpa.domain.Specification;
 
 public final class TransactionSpecifications {
-  public static Specification<TransactionEntity> getTransactionsByCriteria(
+  public static Specification<TransactionEntity> transactionsByCriteria(
       TransactionSearchCriteria criteria) {
     return Specification.where(hasSequenceNumber(criteria.getSequenceNumber()))
         .and(hasTransactionType(criteria.getTransactionType()))

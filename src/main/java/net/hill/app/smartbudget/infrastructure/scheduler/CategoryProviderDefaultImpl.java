@@ -12,11 +12,9 @@ public class CategoryProviderDefaultImpl implements CategoryProvider {
   private static final Map<String, TransactionCategory> CATEGORY_KEYWORDS = new HashMap<>();
 
   static {
-    CATEGORY_KEYWORDS.put("frost b3.1", TransactionCategory.HOUSING_RENT);
     CATEGORY_KEYWORDS.put("electrabel", TransactionCategory.HOUSING);
     CATEGORY_KEYWORDS.put("vivaqua", TransactionCategory.HOUSING);
     CATEGORY_KEYWORDS.put("brutele", TransactionCategory.HOUSING);
-    CATEGORY_KEYWORDS.put("002/7421/77367", TransactionCategory.HOUSING);
     CATEGORY_KEYWORDS.put("carrefour", TransactionCategory.FOOD);
     CATEGORY_KEYWORDS.put("colruyt", TransactionCategory.FOOD);
     CATEGORY_KEYWORDS.put("lidl", TransactionCategory.FOOD);
@@ -35,7 +33,6 @@ public class CategoryProviderDefaultImpl implements CategoryProvider {
     CATEGORY_KEYWORDS.put("cliniques univ", TransactionCategory.HEALTHCARE);
     CATEGORY_KEYWORDS.put("pearle opticiens", TransactionCategory.HEALTHCARE);
     CATEGORY_KEYWORDS.put("synlab", TransactionCategory.HEALTHCARE);
-    CATEGORY_KEYWORDS.put("dentiste duquesne", TransactionCategory.HEALTHCARE);
     CATEGORY_KEYWORDS.put("zeeman", TransactionCategory.CLOTHING);
     CATEGORY_KEYWORDS.put("berca", TransactionCategory.CLOTHING);
     CATEGORY_KEYWORDS.put("orchestra", TransactionCategory.CLOTHING);
@@ -45,34 +42,30 @@ public class CategoryProviderDefaultImpl implements CategoryProvider {
     CATEGORY_KEYWORDS.put("ikea", TransactionCategory.UTILITIES);
     CATEGORY_KEYWORDS.put("spf finances", TransactionCategory.TAXES);
     CATEGORY_KEYWORDS.put("oneplus", TransactionCategory.TELECOM);
+    CATEGORY_KEYWORDS.put("base prepaid", TransactionCategory.TELECOM);
     CATEGORY_KEYWORDS.put("lycatalk", TransactionCategory.TELECOM);
     CATEGORY_KEYWORDS.put("lycamobile", TransactionCategory.TELECOM);
     CATEGORY_KEYWORDS.put("stib", TransactionCategory.TRANSPORT);
     CATEGORY_KEYWORDS.put("delijn", TransactionCategory.TRANSPORT);
     CATEGORY_KEYWORDS.put("lukoil", TransactionCategory.TRANSPORT);
+    CATEGORY_KEYWORDS.put("q park", TransactionCategory.TRANSPORT);
     CATEGORY_KEYWORDS.put("parking fp", TransactionCategory.TRANSPORT);
     CATEGORY_KEYWORDS.put("yellowbrick", TransactionCategory.TRANSPORT);
     CATEGORY_KEYWORDS.put("interparking zaventem", TransactionCategory.TRANSPORT);
     CATEGORY_KEYWORDS.put("parking des 2 portes", TransactionCategory.TRANSPORT);
     CATEGORY_KEYWORDS.put("4411 parking and mobility", TransactionCategory.TRANSPORT);
-    CATEGORY_KEYWORDS.put("dubai", TransactionCategory.TRAVEL);
     CATEGORY_KEYWORDS.put("alipay", TransactionCategory.TRAVEL);
     CATEGORY_KEYWORDS.put("trip.com", TransactionCategory.TRAVEL);
     CATEGORY_KEYWORDS.put("trip. com", TransactionCategory.TRAVEL);
     CATEGORY_KEYWORDS.put("wu", TransactionCategory.FAMILY_SUPPORT);
-    CATEGORY_KEYWORDS.put("b22001480", TransactionCategory.SPORT);
-    CATEGORY_KEYWORDS.put("triton", TransactionCategory.SPORT);
     CATEGORY_KEYWORDS.put("decathlon", TransactionCategory.SPORT);
     CATEGORY_KEYWORDS.put("rayna tourism", TransactionCategory.ENTERTAINMENT);
-    CATEGORY_KEYWORDS.put("devoteam", TransactionCategory.SALARY);
-    CATEGORY_KEYWORDS.put("be37 6511 6079 9128", TransactionCategory.FAMILY_ALLOWANCES);
     CATEGORY_KEYWORDS.put("amzn", TransactionCategory.AMAZON);
     CATEGORY_KEYWORDS.put("amazon", TransactionCategory.AMAZON);
     CATEGORY_KEYWORDS.put("paypal", TransactionCategory.PAYPAL);
     CATEGORY_KEYWORDS.put("commune d'evere", TransactionCategory.ADMINISTRATION);
     CATEGORY_KEYWORDS.put("commune d evere", TransactionCategory.ADMINISTRATION);
     CATEGORY_KEYWORDS.put("gestion de votre compte", TransactionCategory.BANKING);
-    CATEGORY_KEYWORDS.put("be45 9502 0281 3389", TransactionCategory.SAVINGS);
     CATEGORY_KEYWORDS.put("retrait d'especes", TransactionCategory.SAVINGS);
     CATEGORY_KEYWORDS.put("media markt", TransactionCategory.MISCELLANEOUS);
     CATEGORY_KEYWORDS.put("bol.com", TransactionCategory.MISCELLANEOUS);

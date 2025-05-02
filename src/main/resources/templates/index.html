@@ -14,6 +14,7 @@
                     <option value="">All</option>
                     <option th:each="month: ${months}" th:value="${month}" th:text="${month}"></option>
                 </select>
+                <label for="categories" class="form-label">Category</label>
                 <select id="categories" class="form-control text-center p-2 m-4" th:object="${transactionSearchForm}"
                         th:field="*{selectedCategory}">
                     <option value="">All</option>
