@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
 public class AccountStatementProcessorDefaultImpl implements AccountStatementProcessor {
   private static final String REGEX =
       "(?:^|\\n)(\\d{4})\\s+(\\d{2}-\\d{2}-\\d{4})\\s+\\(VAL\\. \\d{2}-\\d{2}-\\d{4}\\)\\s+" +
-      "([+-]?)\\s*([\\d.]+),(\\d{2})\\s*\\n([\\s\\S]*?(?=(?:^|\\n)\\d{4}|\\z))";
+      "([+-]?)\\s*([\\d.]+),(\\d{2})\\s*\\n([\\s\\S]*?(?=(?:^|\\n)\\d{3}|\\z))";
   private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
   private final CategoryProvider categoryProvider;

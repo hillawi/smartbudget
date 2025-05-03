@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import net.hill.app.smartbudget.domain.command.TransactionCreationCommand;
 import net.hill.app.smartbudget.domain.service.AccountStatementProcessor;
+import net.hill.app.smartbudget.infrastructure.config.CategorizationProperties;
 import net.hill.app.smartbudget.infrastructure.scheduler.AccountStatementProcessorDefaultImpl;
 import net.hill.app.smartbudget.infrastructure.scheduler.CategoryProviderDefaultImpl;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,7 +16,8 @@ class AccountStatementProcessorDefaultImplTest {
 
   @BeforeEach
   void setUp() {
-    processor = new AccountStatementProcessorDefaultImpl(new CategoryProviderDefaultImpl());
+    processor = new AccountStatementProcessorDefaultImpl(
+        new CategoryProviderDefaultImpl(new CategorizationProperties()));
   }
 
   @Test
