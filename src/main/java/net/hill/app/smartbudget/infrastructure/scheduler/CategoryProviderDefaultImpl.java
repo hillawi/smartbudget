@@ -2,9 +2,8 @@ package net.hill.app.smartbudget.infrastructure.scheduler;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.List;
-import java.util.Map;
 import net.hill.app.smartbudget.domain.command.CategorizationCreationCommand;
 import net.hill.app.smartbudget.domain.model.TransactionCategory;
 import net.hill.app.smartbudget.domain.service.CategoryProvider;
@@ -13,7 +12,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class CategoryProviderDefaultImpl implements CategoryProvider {
-  private static final Map<TransactionCategory, List<String>> CATEGORY_KEYWORDS = new HashMap<>();
+  private static final EnumMap<TransactionCategory, List<String>> CATEGORY_KEYWORDS =
+      new EnumMap<>(TransactionCategory.class);
 
   static {
     Arrays.stream(TransactionCategory.values())
